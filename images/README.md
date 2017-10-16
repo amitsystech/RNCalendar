@@ -1,5 +1,4 @@
-# RNCalendar
-Customizable UI calendar, It's expansion of react-native-calendar lib, here user can show multiple events on same date and much better UI and UX 
+## react-native-calendar
 
 A `<Calendar>` component for React Native
 
@@ -12,31 +11,27 @@ Portrait mode only
 ## Usage
 ```javascript
 <Calendar
-currentMonth={'2015-08-01'}       // Optional date to set the currently displayed month after initialization
-customStyle={{day: {fontSize: 15, textAlign: 'center'}}} // Customize any pre-defined styles
-dayHeadings={Array}               // Default: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
-eventDates={['2015-07-01']}       // Optional array of moment() parseable dates that will show an event indicator
-events={[{date:'2015-07-01', ..}]}// Optional array of event objects with a date property and custom styles for the event indicator
-monthNames={Array}                // Defaults to english names of months
-nextButtonText={'Next'}           // Text for next button. Default: 'Next'
-onDateSelect={(date) => this.onDateSelect(date)} // Callback after date selection
-onDateLongPress={(date) => this.onDateLongPress(date)} // Callback after date is long pressed
-onSwipeNext={this.onSwipeNext}    // Callback for forward swipe event
-onSwipePrev={this.onSwipePrev}    // Callback for back swipe event
-onTouchNext={this.onTouchNext}    // Callback for next touch event
-onTouchPrev={this.onTouchPrev}    // Callback for prev touch event
-onTitlePress={this.onTitlePress}  // Callback on title press
-prevButtonText={'Prev'}           // Text for previous button. Default: 'Prev'
-removeClippedSubviews={false}     // Set to false for us within Modals. Default: true
-renderDay={<CustomDay />}         // Optionally render a custom day component
-scrollEnabled={true}              // False disables swiping. Default: False
-selectedDate={'2015-08-15'}       // Day to be selected
-showControls={true}               // False hides prev/next buttons. Default: False
-showEventIndicators={true}        // False hides event indicators. Default:False
-startDate={'2015-08-01'}          // The first month that will display. Default: current month
-titleFormat={'MMMM YYYY'}         // Format for displaying current month. Default: 'MMMM YYYY'
-today={'2017-05-16'}              // Defaults to today
-weekStart={1} // Day on which week starts 0 - Sunday, 1 - Monday, 2 - Tuesday, etc, Default: 1
+  currentMonth={'2015-08-01'}       // Optional date to set the currently displayed month after initialization
+  customStyle={{day: {fontSize: 15, textAlign: 'center'}}} // Customize any pre-defined styles
+  dayHeadings={Array}               // Default: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+  eventDates={['2015-07-01']}       // Optional array of moment() parseable dates that will show an event indicator
+  events={[{date:'2015-07-01', ..}]}// Optional array of event objects with a date property and custom styles for the event indicator
+  monthNames={Array}                // Defaults to english names of months
+  nextButtonText={'Next'}           // Text for next button. Default: 'Next'
+  onDateSelect={(date) => this.onDateSelect(date)} // Callback after date selection
+  onSwipeNext={this.onSwipeNext}    // Callback for forward swipe event
+  onSwipePrev={this.onSwipePrev}    // Callback for back swipe event
+  onTouchNext={this.onTouchNext}    // Callback for next touch event
+  onTouchPrev={this.onTouchPrev}    // Callback for prev touch event
+  prevButtonText={'Prev'}           // Text for previous button. Default: 'Prev'
+  scrollEnabled={true}              // False disables swiping. Default: False
+  selectedDate={'2015-08-15'}       // Day to be selected
+  showControls={true}               // False hides prev/next buttons. Default: False
+  showEventIndicators={true}        // False hides event indicators. Default:False
+  startDate={'2015-08-01'}          // The first month that will display. Default: current month
+  titleFormat={'MMMM YYYY'}         // Format for displaying current month. Default: 'MMMM YYYY'
+  today={'2017-05-16'}              // Defaults to today
+  weekStart={1} // Day on which week starts 0 - Sunday, 1 - Monday, 2 - Tuesday, etc, Default: 1
 />
 ```
 
@@ -50,12 +45,12 @@ There are a number of pre-defined styles in the calendar. Below, we will give an
 
 ```js
 const Schedule = () => {
-const customStyle = {
-calendarContainer: {
-backgroundColor: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    calendarContainer: {
+      backgroundColor: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -67,12 +62,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-calendarControls: {
-backgroundColor: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    calendarControls: {
+      backgroundColor: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -84,12 +79,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-calendarHeading: {
-backgroundColor: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    calendarHeading: {
+      backgroundColor: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -101,16 +96,16 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-controlButton: {
-backgroundColor: 'blue',
-},
-}
-return (
-<Calendar
-showControls
-customStyle={customStyle} />
-)
+  const customStyle = {
+    controlButton: {
+      backgroundColor: 'blue',
+    },
+  }
+  return (
+    <Calendar
+      showControls
+      customStyle={customStyle} />
+  )
 }
 ```
 
@@ -122,16 +117,16 @@ customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-controlButtonText: {
-color: 'blue',
-},
-}
-return (
-<Calendar
-showControls
-customStyle={customStyle} />
-)
+  const customStyle = {
+    controlButtonText: {
+      color: 'blue',
+    },
+  }
+  return (
+    <Calendar
+      showControls
+      customStyle={customStyle} />
+  )
 }
 ```
 
@@ -143,12 +138,12 @@ customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-currentDayCircle: {
-backgroundColor: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    currentDayCircle: {
+      backgroundColor: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -160,12 +155,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-currentDayText: {
-color: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    currentDayText: {
+      color: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -177,12 +172,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-day: {
-color: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    day: {
+      color: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -194,12 +189,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-dayButton: {
-backgroundColor: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    dayButton: {
+      backgroundColor: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -211,12 +206,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-dayButtonFiller: {
-backgroundColor: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    dayButtonFiller: {
+      backgroundColor: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -228,12 +223,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-dayCircleFiller: {
-backgroundColor: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    dayCircleFiller: {
+      backgroundColor: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -245,16 +240,16 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-dayHeading: {
-color: 'blue',
-},
-}
-return (
-<Calendar
-showEventIndicators
-customStyle={customStyle} />
-)
+  const customStyle = {
+    dayHeading: {
+      color: 'blue',
+    },
+  }
+  return (
+    <Calendar
+    showEventIndicators
+    customStyle={customStyle} />
+  )
 }
 ```
 
@@ -266,19 +261,19 @@ customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-eventIndicator: {
-backgroundColor: 'blue',
-width: 10,
-height: 10,
-},
-}
-return (
-<Calendar
-showEventIndicators
-eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}
-customStyle={customStyle} />
-)
+  const customStyle = {
+    eventIndicator: {
+      backgroundColor: 'blue',
+      width: 10,
+      height: 10,
+    },
+  }
+  return (
+    <Calendar
+      showEventIndicators
+      eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}
+      customStyle={customStyle} />
+  )
 }
 ```
 
@@ -290,19 +285,19 @@ customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-eventIndicatorFiller: {
-backgroundColor: 'blue',
-width: 10,
-height: 10,
-},
-}
-return (
-<Calendar
-showEventIndicators
-eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}
-customStyle={customStyle} />
-)
+  const customStyle = {
+    eventIndicatorFiller: {
+      backgroundColor: 'blue',
+      width: 10,
+      height: 10,
+    },
+  }
+  return (
+    <Calendar
+      showEventIndicators
+      eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}
+      customStyle={customStyle} />
+  )
 }
 ```
 
@@ -314,17 +309,17 @@ customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-hasEventCircle: {
-backgroundColor: 'blue',
-},
-}
-return (
-<Calendar
-showEventIndicators
-eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}
-customStyle={customStyle} />
-)
+  const customStyle = {
+    hasEventCircle: {
+      backgroundColor: 'blue',
+    },
+  }
+  return (
+    <Calendar
+      showEventIndicators
+      eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}
+      customStyle={customStyle} />
+  )
 }
 ```
 
@@ -336,20 +331,20 @@ customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-hasEventCircle: {
-backgroundColor: 'blue',
-},
-hasEventDaySelectedCircle: {
-backgroundColor: 'red',
-},
-}
-return (
-<Calendar
-showEventIndicators
-eventDates={['2016-12-03', '2016-12-21', '2016-12-22', '2016-12-30']}
-customStyle={customStyle} />
-)
+  const customStyle = {
+    hasEventCircle: {
+      backgroundColor: 'blue',
+    },
+    hasEventDaySelectedCircle: {
+      backgroundColor: 'red',
+  	},
+  }
+  return (
+    <Calendar
+      showEventIndicators
+      eventDates={['2016-12-03', '2016-12-21', '2016-12-22', '2016-12-30']}
+      customStyle={customStyle} />
+  )
 }
 ```
 
@@ -361,17 +356,17 @@ customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-hasEventText: {
-backgroundColor: 'blue',
-},
-}
-return (
-<Calendar
-showEventIndicators
-eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}
-customStyle={customStyle} />
-)
+  const customStyle = {
+    hasEventText: {
+      backgroundColor: 'blue',
+    },
+  }
+  return (
+    <Calendar
+      showEventIndicators
+      eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}
+      customStyle={customStyle} />
+  )
 }
 ```
 
@@ -383,12 +378,12 @@ customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-monthContainer: {
-backgroundColor: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    monthContainer: {
+      backgroundColor: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -400,12 +395,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-selectedDayCircle: {
-backgroundColor: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    selectedDayCircle: {
+      backgroundColor: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -417,12 +412,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-selectedDayText: {
-color: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    selectedDayText: {
+      color: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -431,19 +426,15 @@ return <Calendar customStyle={customStyle} />
 ### title
 
 `title` styles the title at the top of the calendar.
-`titleText` styles text within title.
 
 ```js
 const Schedule = () => {
-const customStyle = {
-title: {
-color: 'blue',
-},
-titleText: {
-fontSize: 12,
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    title: {
+      color: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -455,12 +446,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-weekendDayButton: {
-backgroundColor: 'red',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    weekendDayButton: {
+      backgroundColor: 'red',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -472,12 +463,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-weekendDayText: {
-color: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    weekendDayText: {
+      color: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -489,12 +480,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-weekendHeading: {
-color: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    weekendHeading: {
+      color: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
@@ -506,12 +497,12 @@ return <Calendar customStyle={customStyle} />
 
 ```js
 const Schedule = () => {
-const customStyle = {
-weekRow: {
-backgroundColor: 'blue',
-},
-}
-return <Calendar customStyle={customStyle} />
+  const customStyle = {
+    weekRow: {
+      backgroundColor: 'blue',
+    },
+  }
+  return <Calendar customStyle={customStyle} />
 }
 ```
 
